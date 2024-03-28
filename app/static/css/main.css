@@ -1,0 +1,13 @@
+h1 {
+    color: red;
+    align-items: center;
+}
+body{
+    background-image: url('https://img.freepik.com/fotos-premium/atardecer-montanasia-generativa_218381-14276.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color: #FFFFFF;
+
+
+}
