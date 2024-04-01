@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina TR</title>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+</head>
+<body>
+    <nav>
+        <a class = 'nav-block', href = 'http://127.0.0.1:8000/' > Inicio</a>
+        <a class = 'nav-block' href = 'http://127.0.0.1:8000/login' > "Inicio de sesión"</a>
+        <a class = 'nav-block' href = 'http://127.0.0.1:8000/about' > Un poco sobre mi</a>
+    </nav>
+    <div class 'flex-container'>
+        <h1>Un poco sobre mi</h1>
+            <div>
+                <p id = 'presentacion'> ¡Hola a todos! Me llamo Edgar Saez y estoy aquí para contaros un poco sobre mí. Actualmente estoy en primero de bachillerato y
+                estoy metido de lleno en el mundo de la programación web. Mi objetivo en este momento es crear una página web usando Django. 
+                ¿Por qué Django? Porque dicen que es genial y quiero descubrirlo por mí mismo.
+                <br>
+                <br>
+                Quiero hacer esta página web como parte de mi proyecto final de bachillerato. Pero más allá de eso, realmente quiero sumergirme en el proceso de desarrollo web.
+                Desde la planificación inicial hasta la implementación y la puesta en marcha, quiero aprenderlo todo.
+                <br>
+                <br>
+                Creo que este proyecto no solo me ayudará a aprender a programar, sino que también me enseñará habilidades como resolver problemas y ser creativo.
+                Sé que habrá desafíos en el camino, pero estoy emocionado de enfrentarlos y aprender de ellos.
+                <br>
+                <br>
+                <em>FIN</em>
+                </p> 
+            </div>
+        </div>
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>

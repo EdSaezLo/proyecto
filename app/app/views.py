@@ -7,3 +7,6 @@ def home(request):
 
 def login(request):
     return render(request,'homepage/login.html')
+
+def about(request):
+    return render(request, 'homepage/about.html')

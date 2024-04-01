@@ -18,8 +18,10 @@ from django.contrib import admin
 from django.urls import path
 from app.views import home
 from app.views import login
+from app.views import about
 
 urlpatterns = [
     path('', home),
-    path('login/', login)
+    path('login/', login),
+    path('about/', about)
 ]

@@ -1,4 +1,4 @@
-#titulo {
+h1 {
     color: white;
     font-size: xx-large;
     display: flex;
@@ -12,20 +12,21 @@ body {
     background-attachment: fixed;
     background-size: cover;
     color: #FFFFFF;
+
+}
+
+#login{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
+
 }
 p{
     font-size: large;
-    color: #000000;
-    max-width: 300px; 
+    color: #000000; 
     overflow-wrap: break-word; 
-    display: flex;
-    justify-content: center;
-
 }
 
 #caja{
@@ -56,12 +57,44 @@ p{
     display: flex;
     flex-direction: column;
     align-items: center;
+
 }
 
 #texto{
     display: flex;
     justify-content: center;
 
+}
+
+.nav-block{
+    display: inline-block;
+    background-color: white;
+    border: 2px solid #000000;
+    font-size: large;
+    color: black;
+    padding: 10px 30px;
+    text-decoration: none;
+}
+.nav-block:hover{
+    background-color: antiquewhite;
+
+
+}
+nav{
+    background-color: beige;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+
+
+}
+
+
+#presentacion{
+    font-size: large;
+    background-color: beige;
+    border-radius: 10px;
+    border: 3px solid #000000;
 
 
 }
