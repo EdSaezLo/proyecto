@@ -6,12 +6,26 @@ h1 {
   
 }
 
+h4{
+    color: white;
+    display: flex;
+    justify-content: center;
+
+
+}
+
 body {
-    background-image: url('https://img.freepik.com/fotos-premium/atardecer-montanasia-generativa_218381-14276.jpg');
+    background-image: url('https://wallpapers.com/images/hd/black-color-background-with-top-lighting-3lnxae5rgl80fa1n.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     color: #FFFFFF;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+
+    
 
 }
 
@@ -37,6 +51,7 @@ p{
     display: flex;
     justify-content: center;
     border-radius: 20px;
+    padding: 20px;
 }
 
 #texto-caja{
@@ -66,33 +81,79 @@ p{
 
 }
 
-.nav-block{
-    display: inline-block;
-    background-color: white;
-    border: 2px solid #000000;
-    font-size: large;
-    color: black;
-    padding: 10px 30px;
-    text-decoration: none;
-}
-.nav-block:hover{
-    background-color: antiquewhite;
-
-
-}
-nav{
-    background-color: beige;
-    padding: 10px;
-    display: flex;
-    justify-content: space-around;
-
-
-}
 
 
 #presentacion{
     font-size: large;
-    background-color: beige;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    border: 3px solid #000000;
+
+
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+    position: sticky;
+}
+
+li {
+  float: left;
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+  position: sticky;
+
+}
+
+
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 145px;
+  text-decoration: none;
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+  position: sticky;
+
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+  position: sticky;
+
+}
+
+.active{
+    background-color: #04AA6D;
+    position: sticky;
+
+
+
+}
+
+#formulario{
+    color:black;
+}
+
+#register{
+    background-color: white;
+    padding: 20px;
     border-radius: 10px;
     border: 3px solid #000000;
 
