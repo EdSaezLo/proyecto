@@ -18,33 +18,32 @@
     <nav>
         
         
-        <li><a , href = {% url "home" %} > Inicio</a></li>
-        <li><a  href = {% url "nombre" %} >Introducir nombre</a></li>
-        <li><a  href = {% url "about" %} > Un poco sobre mi</a></li>
+        <li><a href = {% url "home" %} > Inicio</a></li>
+        <li><a href = {% url "nombre" %} >Introducir nombre</a></li>
+        <li><a href = {% url "about" %} > Un poco sobre mi</a></li>
         {% if request.user.is_authenticated %}
             <li><a href="{% url 'exit' %}">Salir</a></li>
 
         {% else %}
         
-        <li><a  href="{% url 'login' %}">Iniciar sesión</a></li>
-        
+        <li><a href="{% url 'login' %}">Iniciar sesión</a></li>
+        <li><a  class = 'active' href="{% url 'register' %}">Registrarse</a></li>
         {% endif %}
-
-      
+        
 
     
     </nav>
     <div class="flex-container">
         <h1 id="titulo">Registrarse </h1>
         
-        <div class = 'card mx-auto', style = 'width:90rem;'>
-            <div class = 'card-body'>
+        <div id = 'register'>
+           
                 <br>
                 <p class = 'card-title'>Complete todos los campos</p>
                 <br>
                 <form style = 'color:black;' action = '' method = 'POST'>
                     {% csrf_token %}
-
+                    <br>
                     {{form | crispy}}
                     <br>
                     <br>
@@ -54,7 +53,7 @@
                     <a href = {% url "home" %} > Inicio</a>
                     <a href = {% url "login" %} > Iniciar sesión</a>
             
-            </div>
+           
         </div>
 
        

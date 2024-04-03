@@ -65,6 +65,7 @@ p{
     justify-content: center;
     flex-direction: column; 
     align-items: center;
+    
 }
 
 
@@ -88,13 +89,18 @@ p{
     background-color: rgb(255, 255, 255);
     border-radius: 10px;
     border: 3px solid #000000;
+    text-align: center;
+    width: 60%;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 
 
 }
 
 nav {
-    display: flex;
-    justify-content: space-around;
+
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -104,7 +110,9 @@ nav {
     font-optical-sizing: auto;
     font-weight: normal;
     font-style: normal;
-    position: sticky;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
 li {
@@ -123,7 +131,7 @@ li a {
   display: block;
   color: white;
   text-align: center;
-  padding: 14px 145px;
+  padding: 14px 15px;
   text-decoration: none;
   font-family: "Playfair Display", serif;
   font-optical-sizing: auto;
@@ -158,4 +166,35 @@ li a:hover:not(.active) {
     border: 3px solid #000000;
 
 
+}
+
+
+body {margin: 0;}
+
+nav.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+nav.topnav li {float: left;}
+
+nav.topnav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+nav.topnav li a:hover:not(.active) {background-color: #111;}
+
+nav.topnav li a.active {background-color: #04AA6D;}
+
+nav.topnav li.right {float: right;}
+
+@media screen and (max-width: 600px) {
+  nav.topnav li.right, 
+  nav.topnav li {float: none;}
 }
