@@ -20,8 +20,8 @@ def login(request):
 
 @login_required
 
-def nombre(request):
-    return render(request,'homepage/nombre.html')
+def calc(request):
+    return render(request,'homepage/calc.html')
 
 def exit(request):
     logout(request)

@@ -1,13 +1,13 @@
 from django.contrib import admin
 from django.urls import path, include
 from .views import home
-from .views import nombre
+from .views import calc
 from .views import about
 from .views import login, exit, register
 
 urlpatterns = [
     path('', home, name = 'home'),
-    path('nombre/', nombre, name  = 'nombre'),
+    path('calc/', calc, name  = 'calc'),
     path('about/', about, name='about'),
     path('login/', login, name='login'),
     path('accounts/', include('django.contrib.auth.urls')),

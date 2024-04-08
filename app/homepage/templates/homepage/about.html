@@ -28,54 +28,62 @@
 <body>
     <div class = 'container'>
     
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container-fluid">
-              <a class="navbar-brand" href={% url "home" %}>Primera web</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarText">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href={% url "home" %}>Inicio</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href = {% url "nombre" %} >Introducir nombre</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link active" href = {% url "about" %} > Un poco sobre mi</a>
-                  </li>
-                  {% if request.user.is_authenticated %}
-                        <li class="nav-item">
-                            <a class="nav-link" href='{% url 'exit' %}'>Salir</a>
-                        </li>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href={% url "home" %}>Primera web</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href={% url "home" %}>Inicio</a>
+              </li>
+              {% if request.user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="nav-link" href={% url 'calc' %}>Calculadora</a>
+                    </li>
     
-                  {% else %}
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'login' %}">Iniciar sesión</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'register' %}">Registrarse</a>
-                        </li>
-                  {% endif %}
-                </ul>
-                <span class="navbar-text">
-                    {% if request.user.is_authenticated %}
-                        Bienvenido {{user.username | upper}}
-                    {% else %}
-                        
-                    {% endif %}
-                </span>
-              </div>
-            </div>
-          </nav>
+              {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'calc' %}">Calculadora (requiere inicio de sesión)</a>
+                    </li>
+              {% endif %}
+              <li class="nav-item">
+                <a class="nav-link" href = {% url "about" %} > Un poco sobre mi</a>
+              </li>
+              {% if request.user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="nav-link" href='{% url 'exit' %}'>Salir</a>
+                    </li>
+    
+              {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'login' %}">Iniciar sesión</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'register' %}">Registrarse</a>
+                    </li>
+              {% endif %}
+            </ul>
+            <span class="navbar-text">
+                {% if request.user.is_authenticated %}
+                    Bienvenido {{user.username | upper}}
+                {% else %}
+                    
+                {% endif %}
+            </span>
+          </div>
+        </div>
+      </nav>
           <br>
           <br>
         
         <h1>Un poco sobre mi</h1>
         <br>
         <br>
-    <div class = 'card mx-auto', style = 'width:90rem;'>
+<div class="text-center">
+    <div class = 'card mx-auto', style = 'width:auto;'>
         <div class = 'card-body'>
             <div class 'container'>
                 <p style = 'color:black;'> ¡Hola a todos! Me llamo Edgar Saez y estoy aquí para contaros un poco sobre mí. Actualmente estoy en primero de bachillerato y
