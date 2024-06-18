@@ -3,7 +3,7 @@ from django.urls import path, include
 from .views import home
 from .views import calc
 from .views import about
-from .views import login, exit, register
+from .views import login, exit, register, animacion
 
 urlpatterns = [
     path('', home, name = 'home'),
@@ -13,5 +13,6 @@ urlpatterns = [
     path('accounts/', include('django.contrib.auth.urls')),
     path('admin/', admin.site.urls),
     path('logout/', exit, name='exit'),
-    path('register/', register, name = 'register')
+    path('register/', register, name = 'register'),
+    path('animacion/', animacion, name = 'animacion'),
 ]

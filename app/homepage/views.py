@@ -17,6 +17,8 @@ def about(request):
 def login(request):
     return render(request, 'registration/login.html')
 
+def animacion(request):
+    return render(request, 'homepage/animacion.html')
 
 @login_required
 
