@@ -17,10 +17,10 @@ def about(request):
 def login(request):
     return render(request, 'registration/login.html')
 
+@login_required
 def animacion(request):
     return render(request, 'homepage/animacion.html')
 
-@login_required
 
 def calc(request):
     return render(request,'homepage/calc.html')
